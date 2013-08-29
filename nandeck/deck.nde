@@ -1,0 +1,37 @@
+BORDER = ROUNDED, #808080, 0.25, DOTTED, #F0F0F0, 1
+PAGE = 21.59, 27.94, LANDSCAPE
+DPI = 300
+CARDSIZE = 6,9
+MARGINS = 1, 1, 1, 1
+OVERSAMPLE = 2
+
+<name> = 0, 0.5, 6, 3
+<image> = 0, 1.6, 6, 3.5
+<text> = 0.5, 5.5, 5, 3
+<team> = 5.25, 1.5, .5, 5
+
+[good] = #0000FF
+[evil] = #FF0000
+[neutral] = #008080
+
+macro = card, (range), (name), (team), (txtColor), (txtSize), (txt)
+  font = arial, 28, B, (txtColor)
+  text = (range), (name), <name>, center, top
+  [file] = concat((name), 1, ".png", 1)
+  image= (range), [file], <image>
+  font = arial, (txtSize), N, (txtColor)
+  text = (range), (txt), <text>, left, wordwrap
+  font = arial, 10, N, (txtColor)
+  text = (range), (team), <team>, center, top, 90
+end
+     
+card = 1,   "Seer",     "Citizen Team",  [good], 12, "\10\Phase 1 (10 seconds)\10\Secretly view 1 player's role card, or both \34\dead cards\34\."
+card = 2-3, "Werewolf", "Werewolf Team", [evil], 12, "Phase 2 (10 seconds)\10\Open eyes to see any other werewolves.\10\\10\Wins if no werewolves are lynched."             
+card = 4,   "Thief",    "Citizen Team",  [good], 12, "\10\Phase 3 (10 seconds)\10\You may exchange role cards with another player (and look at it afterwords)." 
+card = 5-8, "Villager", "Citizen Team",  [good], 12, "No special powers.\10\\10\Reminder: all citizens win if a werewolf is lynched." 
+card = 9,   "Hunter",   "Citizen Team",  [good], 12, "After voting, look at your role card. Reveal the hunter card and the recipient of your vote is lynched." 
+card = 10,  "Martyr",   "",           [neutral], 12, "\10\Wins alone if lynched.\10\Loses if not lynched." 
+card = 11,  "Mayor",    "Citizen Team",  [good], 10, "After voting, before lynchings, look at your role card. Reveal the mayor card and privately replace it with a random \34\dead card\34\. Hold another lynch vote; citizens win only if ALL werewolves are lynched between both votes."
+card = 12,  "Minion",   "Werewolf Team", [evil], 12, "\10\Wins if werewolves win.\10\Loses if werewolves lose." 
+
+htmlfile = 13-16, "rules.html", 0.25, 0.25, 5.5, 8.5
