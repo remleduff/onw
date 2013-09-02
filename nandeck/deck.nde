@@ -32,6 +32,6 @@ card = 5-8, "Villager", "Citizen Team",  [good], 12, "No special powers.\10\\10\
 card = 9,   "Hunter",   "Citizen Team",  [good], 12, "After voting, look at your role card. Reveal the hunter card and the recipient of your vote is lynched." 
 card = 10,  "Martyr",   "",           [neutral], 12, "\10\Wins alone if lynched.\10\Loses if not lynched." 
 card = 11,  "Mayor",    "Citizen Team",  [good], 10, "After voting, before lynchings, look at your role card. Reveal the mayor card and privately replace it with a random \34\dead card\34\. Hold another lynch vote; citizens win only if ALL werewolves are lynched between both votes."
-card = 12,  "Minion",   "Werewolf Team", [evil], 12, "\10\Wins if werewolves win.\10\Loses if werewolves lose." 
+card = 12,  "Minion",   "Werewolf Team", [evil], 12, "\10\Wins and loses with Werewolf Team." 
 
 htmlfile = 13-16, "rules.html", 0.25, 0.25, 5.5, 8.5
